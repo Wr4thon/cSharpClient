@@ -1,6 +1,7 @@
 ﻿namespace Finux.Ai.Api.Contract
 {
     using System.Security;
+    using System.Threading.Tasks;
 
     /// <summary>
     /// The Register interface.
@@ -22,10 +23,10 @@
         /// <returns>
         /// The <see cref="LoginResponse"/>.
         /// </returns>
-        LoginResponse Register(string email, SecureString password, SecureString repeatPassword);
+        Task<LoginResponse> Register(string email, SecureString password, SecureString repeatPassword);
 
         /// <summary>
-        /// Register an user with alpha-key in FINUX.
+        /// Register an user in FINUX.
         /// </summary>
         /// <param name="email">
         /// The email.
@@ -36,12 +37,9 @@
         /// <param name="repeatPassword">
         /// The repeat password.
         /// </param>
-        /// <param name="alphaKey">
-        /// The alpha key.
-        /// </param>
         /// <returns>
-        /// The <see cref="LoginResponse"/>.
+        /// The <see cref="Task"/>.
         /// </returns>
-        LoginResponse AlphaRegister(string email, SecureString password, SecureString repeatPassword, string alphaKey);
+        Task<LoginResponse> Register(string email, string password, string repeatPassword);
     }
 }

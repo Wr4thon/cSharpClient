@@ -1,5 +1,7 @@
 ﻿namespace Finux.Ai.Api.Contract
 {
+    using System.Threading.Tasks;
+
     /// <summary>
     /// The Client interface.
     /// </summary>
@@ -9,8 +11,8 @@
         /// Ping -&gt; Pong.
         /// </summary>
         /// <returns>
-        /// The Success state.
+        /// The Response.
         /// </returns>
-        bool Ping();
+        Task<string> Ping();
     }
 }

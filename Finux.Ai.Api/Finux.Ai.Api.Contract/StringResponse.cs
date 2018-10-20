@@ -2,11 +2,11 @@
 {
     using Finux.Ai.Api.Contract.DataClasses;
 
-    /// <inheritdoc />
     /// <summary>
-    /// The register response.
+    /// The string response.
     /// </summary>
-    public class LoginResponse : Response<RegisterData>
+    public class StringResponse : Response<string>
     {
+
     }
 }
