@@ -1,5 +1,9 @@
-﻿namespace Finux.Ai.Api.Contract {
+﻿namespace Finux.Ai.Api.Contract
+{
     using System.Security;
+    using System.Threading.Tasks;
+
+    using Finux.Ai.Api.Contract.DataClasses.Responses;
 
     /// <summary>
     /// The User interface.
@@ -21,12 +25,18 @@
         /// <param name="sureName">
         /// The sure name.
         /// </param>
-        void AddProfile(string businessId, string company, string firstName, string sureName);
+        /// <returns>
+        /// The <see cref="ProfileResponse"/>.
+        /// </returns>
+        Task<ProfileResponse> AddProfile(string businessId, string company, string firstName, string sureName);
 
         /// <summary>
         /// The get profile.
         /// </summary>
-        void GetProfile();
+        /// <returns>
+        /// The <see cref="ProfileResponse"/>.
+        /// </returns>
+        Task<ProfileResponse> GetProfile();
 
         /// <summary>
         /// Change the user password.
@@ -40,10 +50,30 @@
         /// <param name="repeatPassword">
         /// The repeat password.
         /// </param>
-        void ChangePassword(SecureString newPassword, SecureString oldPassword, SecureString repeatPassword);
+        /// <returns>
+        /// The <see cref="ObjectResponse"/>.
+        /// </returns>
+        Task<ObjectResponse> ChangePassword(SecureString newPassword, SecureString oldPassword, SecureString repeatPassword);
 
         /// <summary>
-        /// Writes feedback to our support-team. User will be get answered via SmartAlerts..
+        /// Change the user password.
+        /// </summary>
+        /// <param name="newPassword">
+        /// The new password.
+        /// </param>
+        /// <param name="oldPassword">
+        /// The old password.
+        /// </param>
+        /// <param name="repeatPassword">
+        /// The repeat password.
+        /// </param>
+        /// <returns>
+        /// The <see cref="ObjectResponse"/>.
+        /// </returns>
+        Task<ObjectResponse> ChangePassword(string newPassword, string oldPassword, string repeatPassword);
+
+        /// <summary>
+        /// Writes feedback to our support-team. User will be get answered via SmartAlerts.
         /// </summary>
         /// <param name="message">
         /// The message.
@@ -51,6 +81,9 @@
         /// <param name="reply">
         /// The reply.
         /// </param>
-        void Feedback(string message, bool reply);
+        /// <returns>
+        /// The <see cref="ObjectResponse"/>.
+        /// </returns>
+        Task<ObjectResponse> Feedback(string message, bool reply);
     }
 }

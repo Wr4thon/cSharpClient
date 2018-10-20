@@ -1,5 +1,8 @@
 ﻿namespace Finux.Ai.Api.Contract.DataClasses
 {
+    /// <summary>
+    /// The profile.
+    /// </summary>
     public class Profile
     {
         /// <summary>
