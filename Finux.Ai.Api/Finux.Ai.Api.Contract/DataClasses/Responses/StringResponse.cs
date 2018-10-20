@@ -1,7 +1,5 @@
-﻿namespace Finux.Ai.Api.Contract
+﻿namespace Finux.Ai.Api.Contract.DataClasses.Responses
 {
-    using Finux.Ai.Api.Contract.DataClasses;
-
     /// <summary>
     /// The string response.
     /// </summary>
