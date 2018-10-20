@@ -3,6 +3,8 @@
     using System.Security;
     using System.Threading.Tasks;
 
+    using Finux.Ai.Api.Contract.DataClasses.Responses;
+
     /// <summary>
     /// The Register interface.
     /// </summary>

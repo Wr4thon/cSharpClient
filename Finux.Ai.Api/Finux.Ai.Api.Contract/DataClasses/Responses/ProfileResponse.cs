@@ -3,10 +3,7 @@
     using Finux.Ai.Api.Contract.DataClasses;
 
     /// <summary>
-    /// The string response.
+    /// The profile response.
     /// </summary>
-    public class StringResponse : Response<string>
-    {
-
-    }
+    public class ProfileResponse : Response<Profile> { }
 }

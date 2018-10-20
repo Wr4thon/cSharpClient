@@ -1,4 +1,4 @@
-﻿namespace Finux.Ai.Api.Contract {
+﻿namespace Finux.Ai.Api.Contract.DataClasses {
     /// <summary>
     /// The register data.
     /// </summary>
